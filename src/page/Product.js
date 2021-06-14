@@ -15,7 +15,7 @@ function Product({ match }) {
          <Header className="layout-header">
             <AppHeader title="Product Detail"/>
          </Header>
-         <Content className="layout-content">
+         <Content >
             <ProductDetail product = {product} />
          </Content>
          <Footer className="layout-footer">

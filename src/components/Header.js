@@ -5,16 +5,16 @@ import { useState } from "react";
 import { Button } from "antd";
 
 export default function Header() {
-    const [activeNavItem, activeNavItemSet] = useState('');
+    const [activeNavItem] = useState('');
     const [visible, setStatetVisible] = useState(false);
     const onSelect = name => (
-        activeNavItemSet(name),
+        // activeNavItemSet(name),
         setStatetVisible(true)
     )
 
     const ViewProfileButton = ({name}) => {
         return <Button  style={{float:"right"}}  className="ham-menu-btn" onClick={()=>onSelect(name) }>
-            <img className="ham-menu-icon" src="https://img.onl/kTUjl9"></img>
+            <img alt="" className="ham-menu-icon" src="https://img.onl/kTUjl9"></img>
         </Button>
     }
 

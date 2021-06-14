@@ -1,9 +1,8 @@
-import { useContext,useEffect } from "react";
 import { Layout } from 'antd';
 import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
 import CartModel from "../components/CartModal"
-import { StoreContext } from "../store"
+
 
 const { Header, Content, Footer } = Layout;
 
@@ -16,7 +15,7 @@ function Shopping() {
             <Header className="layout-header">
             <AppHeader title="Your Home" />
             </Header>
-            <Content classNmae="layout-content" style={{ display:"flex", justifyContent:"center"}}>
+            <Content style={{ display:"flex", justifyContent:"center"}}>
               <CartModel/>  
             </Content>
         </Layout> 

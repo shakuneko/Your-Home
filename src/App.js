@@ -1,6 +1,5 @@
 import {createContext} from "react";
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-//import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Home from "./page/Home" 
 import Product from './page/Product'

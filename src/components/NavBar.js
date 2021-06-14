@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import React, { useState } from 'react';
-import { Button, Drawer } from 'antd';
+import React from 'react';
 import CartSummary from './CartSummary';
 
 export default function NavBar()    {
@@ -22,8 +21,8 @@ export default function NavBar()    {
                     </NavLink>
                 </div>
                 <div className=" header-icon ">
-                    <img className="header-icon1" src="https://raw.githubusercontent.com/shakuneko/icon/master/yh-search.png"/>
-                    <img className="header-icon1" src="https://raw.githubusercontent.com/shakuneko/icon/master/yh-account.png"/>
+                    <img alt="" className="header-icon1" src="https://raw.githubusercontent.com/shakuneko/icon/master/yh-search.png"/>
+                    <img alt="" className="header-icon1" src="https://raw.githubusercontent.com/shakuneko/icon/master/yh-account.png"/>
                     <CartSummary/>
                 </div>
             </div> 

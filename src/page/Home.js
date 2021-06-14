@@ -18,7 +18,7 @@ function Home(){
                 <Header className="layout-header">
                     <AppHeader title={title}/>
                 </Header>
-                <Content classNmae="layout-content">
+                <Content >
                     <ProductList />
                 </Content>
             </Layout> 

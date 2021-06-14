@@ -1,16 +1,16 @@
-import { useState,useContext } from "react";
+import { useState } from "react";
 import { Row, Col } from "antd";
 import { Select } from 'antd';
 import AddToCart from "./AddToCart"
-import { StoreContext } from "../store"
-import { CART_ADD_ITEM } from "../utils/constants"
+
+
 
 
 const { Option } = Select;
 
 
 function ProductDetail({product}) {
-    const { dispatch } = useContext(StoreContext);
+    // const { dispatch } = useContext(StoreContext);
     const [qty, setQty] = useState(product.countInStock > 0 ? 1 : 0);
     const [color, setColor] = useState();
 
@@ -54,7 +54,7 @@ function ProductDetail({product}) {
                         </Select>
                     </p>
                     <div>
-                            <p className="product-qty1">
+                            <p >
                             <p>QUANTITY </p>
                             {"   "}
                             <Select 
@@ -96,28 +96,28 @@ function ProductDetail({product}) {
             <Row className="shop-container" gutter={[16, 32]}>
             
                 <Col lg={{span:1}} >
-                    <button type="button" className="related-btn"> <img className="related-arrow" src="https://raw.githubusercontent.com/shakuneko/icon/master/related-product-privious.png"/></button>
+                    <button type="button" className="related-btn"> <img alt="" className="related-arrow" src="https://raw.githubusercontent.com/shakuneko/icon/master/related-product-privious.png"/></button>
                 </Col>
                 <Col lg={{ span:17 }} sm={{ span:16 }} xs={{ span:16 }}>
                     <div className="related-products-images">
                         <Col  lg={{span:6}} sm={{span:12}} id="photo">
                             
-                            <img className="products-image" src={product.detailproduct1}/>
+                            <img alt="" className="products-image" src={product.detailproduct1}/>
                         </Col>
                         <Col  lg={{span:6}} sm={{span:12}} xs={{ span:0 }}>
-                            <img className="products-image" src={product.detailproduct2}/>
+                            <img alt="" className="products-image" src={product.detailproduct2}/>
                         </Col>
                         <Col  lg={{span:6}} sm={{span:0}} xs={{ span:0 }}>
-                            <img className="products-image" src={product.detailproduct3}/>
+                            <img alt="" className="products-image" src={product.detailproduct3}/>
                         </Col>
                         <Col  lg={{span:6}} sm={{span:0}} xs={{ span:0 }}>
-                            <img className="products-image" src={product.detailproduct4}/>
+                            <img alt="" className="products-image" src={product.detailproduct4}/>
                         </Col>
                     </div> 
                 </Col>
                 <Col  lg={{span:1}} >
                     <div className="btn2">
-                        <button type="button" className="related-btn "> <img className="related-arrow" src="https://raw.githubusercontent.com/shakuneko/icon/master/related-product-next.png"/></button>
+                        <button type="button" className="related-btn "> <img alt="" className="related-arrow" src="https://raw.githubusercontent.com/shakuneko/icon/master/related-product-next.png"/></button>
                     </div>
                 </Col>
             </Row>
