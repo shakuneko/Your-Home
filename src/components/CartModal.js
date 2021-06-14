@@ -58,15 +58,15 @@ export default function CartModal() {
                      
                      <div className="cart-item-content">
                         <div className="shopping-name">
-                           <h5 >{item.name}</h5>
-                           <div >{item.author}</div>
+                           <h5 className="cart-name">{item.name}</h5>
+                           <div className="cart-author-name">{item.author}</div>
                         </div>
 
                         <div className="option-container">
                            <div className="shopping-content">
                               <div className="shopping-content-color">
-                                 {"   "}
-                                 <Select 
+                              <div className="cart-color">{item.col}</div>
+                                 {/* <Select 
                                     defaultValue={item.color} 
                                     placeholder="Select color"
                                     className="select-style cart-top-right-container"
@@ -78,12 +78,11 @@ export default function CartModal() {
                                     {item.color[x]}
                                     </Option>
                                  ))}
-                              </Select>
+                              </Select> */}
                               </div>
 
                               <div  className="shopping-qty">
                                  <div className="product-qty ">
-                                    {"   "}
                                        <Select
                                           defaultValue={item.qty}
                                           value={item.qty}

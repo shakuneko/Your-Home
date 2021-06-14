@@ -20,6 +20,16 @@ const initialState = {
        title: "Your Home",
        products,
     },
+      // cartItems,
+      productDetail: {
+         product: {
+         color:[],
+         },
+         qty: 1,
+         col:'None',
+         colNum:0
+         },
+         
     navBar: {
       activeItem: "/",
       },

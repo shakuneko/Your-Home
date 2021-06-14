@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Row, Col } from "antd";
 import { Select } from 'antd';
 import AddToCart from "./AddToCart"
+import { StoreContext } from "../store"
+import { setProductDetail } from "../action";
 
 
 
@@ -9,10 +11,11 @@ import AddToCart from "./AddToCart"
 const { Option } = Select;
 
 
-function ProductDetail({product}) {
+function ProductDetail() {
+    const { state: { productDetail: { product, qty,col} }, dispatch } = useContext(StoreContext);
     // const { dispatch } = useContext(StoreContext);
-    const [qty, setQty] = useState(product.countInStock > 0 ? 1 : 0);
-    const [color, setColor] = useState();
+    // const [qty, setQty] = useState(product.countInStock > 0 ? 1 : 0);
+    // const [color, setColor] = useState();
 
    return (
        
@@ -38,29 +41,26 @@ function ProductDetail({product}) {
                    
                 <p className="product-color">
                     <p> Color</p>
-                        {"   "}
                         <Select 
-                            defaultValue={color} 
+                            defaultValue={"None"} 
+                            Value={col} 
                             placeholder="Select color"
                             className="select-style shop-top-right-container"
-                            onChange={val=>setColor(val)}
-                            size="large"
+                            onChange={val => setProductDetail(dispatch, product.id,qty,product.color[val], val)}
+                           
                         >
                             {[...Array(product.color.length).keys()].map((x) => (
-                                <Option value={product.color[x]}>
-                                {product.color[x]}
-                                </Option>
+                               <Option  key={x + 1} value={x}>{product.color[x]}</Option>
                             ))}
                         </Select>
                     </p>
                     <div>
-                            <p >
+                            <p className="product-detail-qty">
                             <p>QUANTITY </p>
-                            {"   "}
                             <Select 
                                 defaultValue={qty} 
                                 className="select-style"
-                                onChange={val=>setQty(val)}
+                                onChange={val => setProductDetail(dispatch, product.id, val,col)}
                             >
                                 {[...Array(product.countInStock).keys()].map((x) => (
                                     <Option key={x + 1} value={x + 1}>
@@ -71,7 +71,7 @@ function ProductDetail({product}) {
                           
                         </p>
                     </div>
-                    <AddToCart product={product} qty={qty} />
+                    <AddToCart product={product} qty={qty} color={col} />
                 </div>
             </Col>
         </Row>
