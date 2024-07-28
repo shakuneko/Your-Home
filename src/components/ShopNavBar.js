@@ -17,19 +17,19 @@ export default function ShopNavBar() {
                 <ShopNavItem to="/Shop" className="shop-nav-item" activeClassName="nav-item--active">
                     All
                 </ShopNavItem>
-                <ShopNavItem to="/table" className="shop-nav-item" activeClassName="nav-item--active">
+                <ShopNavItem to="/Shop" className="shop-nav-item" activeClassName="nav-item--active">
                     Table
                 </ShopNavItem>
-                <ShopNavItem to="/chair" className="shop-nav-item" activeClassName="nav-item--active">
+                <ShopNavItem to="/Shop" className="shop-nav-item" activeClassName="nav-item--active">
                     Chair
                 </ShopNavItem>
-                <ShopNavItem to="clock" className="shop-nav-item" activeClassName="nav-item--active">
+                <ShopNavItem to="/Shop" className="shop-nav-item" activeClassName="nav-item--active">
                     Clock
                 </ShopNavItem>
-                <ShopNavItem to="/lighting" className="shop-nav-item" activeClassName="nav-item--active">
+                <ShopNavItem to="/Shop" className="shop-nav-item" activeClassName="nav-item--active">
                     Lighting
                 </ShopNavItem>
-                <ShopNavItem to="/other" className="shop-nav-item" activeClassName="nav-item--active">
+                <ShopNavItem to="/Shop" className="shop-nav-item" activeClassName="nav-item--active">
                     Other
                 </ShopNavItem>
             </div>
