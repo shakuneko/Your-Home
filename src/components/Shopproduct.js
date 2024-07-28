@@ -10,16 +10,10 @@ export default function Shopproduct(){
         <div  className="product">
             <div className="big-container">       
                 <h4 >Shop</h4>
-                    <Layout className="bg-gray">
-                    <Sider
-                        style={{
-                          overflow: 'auto',
-                          position: 'fixed',
-                          left: 100,
-                        }}>
+                <div className="menu-all">
+                  <div className="menu-left">
                       <ShopNavBar />
-                      </Sider>
-                    </Layout>
+                  </div>
                 <section className="shop-ant-layout">
                 <Row gutter={[32,32]}>
                   {products.map(product => (
@@ -34,6 +28,7 @@ export default function Shopproduct(){
                   ))}
                 </Row>
                 </section>
+                </div>
               </div>
     </div>
     

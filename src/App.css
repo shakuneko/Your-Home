@@ -279,6 +279,18 @@ h3 {
   text-align: center;
   margin-top: 2rem;
 }
+.menu-all {
+  display: flex;
+}
+
+.menu-left {
+
+}
+
+.menu-right {
+
+}
+
 
 h4 {
   font-size: 1rem;
@@ -1220,7 +1232,7 @@ ul {
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 0;
-  margin-left: 200px;
+  margin-left: 20px;
 }
 .shopmain-layout {
   display: flex;
